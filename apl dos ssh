@@ -13,7 +13,7 @@
             
       } if (($attacktype == "dos") || ($attacktype == "DDOS")) {
         
-        $output = shell_exec("perl dos.pl $ip $port $time $pack");  }
+        $output = shell_exec("perl Dos.pl $ip $port $time $pack");  }
         
         
         
